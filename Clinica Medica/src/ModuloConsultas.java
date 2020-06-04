@@ -9,15 +9,20 @@ public class ModuloConsultas {
 
     public void BuscarMedico(HashMedicos hashMedicos){
 
-        System.out.println("Qual a especialidade? ");
+        System.out.println("Qual a especialidade do Médico? ");
         int esp = ler.nextInt();
-        System.out.println("Qual a id? ");
+        System.out.println("Qual a CRM do médico? ");
         int id = ler.nextInt();
         Medico medico = hashMedicos.pesquisar(esp, id);
-        System.out.println(medico.toString());
-        //medico.ListaConsultas.Imprimir();
-        
+        System.out.println(medico.getListaConsultas_Medicos());
+        System.out.println("------------------------");
+        System.out.println("| Historico do Médico: | " + medico.getNome_Medico());
+        System.out.println("------------------------");
+        System.out.println("---------------------");
+        System.out.println("| Dados do Médico:  | " + medico.toString() + ", Total Recebido: " + NumberFormat.getCurrencyInstance().format(medico.getValorTotal_Medico()));
+        System.out.println("---------------------");
     }
+    
     public void BuscarPaciente(HashPacientes hashPacientes){
     
         System.out.println("Qual o CFP do paciente? ");

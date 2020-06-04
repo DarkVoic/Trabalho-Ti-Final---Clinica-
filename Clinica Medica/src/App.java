@@ -52,6 +52,9 @@ public class App {
                 case "2":
                     consultar.BuscarConsultas(hashMedicos);
                     break;
+                case "3":
+                    consultar.BuscarMedico(hashMedicos);
+                    break;
                 default:
                     break;
             }

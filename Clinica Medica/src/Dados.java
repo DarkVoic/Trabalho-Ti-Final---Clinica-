@@ -26,8 +26,8 @@ public class Dados {
 
         try{
         // FileReader para para ler arquivos dos Dados do (Paciente| Medico| Consultas)
-        final FileReader leitorPacientes = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\Trabalho Final TI - Clinica Medica\\AEDpacientes.txt");
-        final BufferedReader lerPacientes = new BufferedReader(leitorPacientes);
+        final FileReader leitorPacientes = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\TrabalhoTI Final - Clinica Medica\\AEDpacientes.txt");
+        final BufferedReader lerPacientes = new BufferedReader(leitorPacientes); 
         
             while (lerPacientes.ready()){
             
@@ -51,7 +51,7 @@ public class Dados {
     public void CarregarMedicos() throws ParseException {
 
         try{
-            final FileReader leitorMedicos = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\Trabalho Final TI - Clinica Medica\\AEDmedicos.txt");
+            final FileReader leitorMedicos = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\TrabalhoTI Final - Clinica Medica\\AEDmedicos.txt");
             final BufferedReader lerMedicos = new BufferedReader(leitorMedicos);
             while (lerMedicos.ready()){
             
@@ -76,7 +76,7 @@ public class Dados {
     public void CarregarConsultas() throws ParseException {
         
         try{
-            final FileReader leitorConsultas = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\Trabalho Final TI - Clinica Medica\\AEDconsultas.txt");
+            final FileReader leitorConsultas = new FileReader("C:\\Users\\mathe\\Universidade PUC\\4 - Periodo\\Algoritmos e Estruturas de Dados\\TrabalhoTI Final - Clinica Medica\\AEDconsultas.txt");
             final BufferedReader lerConsultas = new BufferedReader(leitorConsultas);
            
             while (lerConsultas.ready()){
@@ -100,8 +100,9 @@ public class Dados {
                     default:
                         break;
                 }
-                hashPacientes.InserirConsulta(consulta);
                 hashMedicos = Escalonador.Escalonar(consulta, hashMedicos);
+                hashPacientes.InserirConsulta(consulta);
+                
                
             }lerConsultas.close();
         }

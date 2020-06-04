@@ -33,7 +33,7 @@ public class Medico {
 
     public double CalcularSalario(){
        
-        return ((getValorTotal_Medico().doubleValue() * 80) / 100); // Equivalente a sum().
+        return ((valorTotal.doubleValue() * 80) / 100); // Equivalente a sum().
     }
 
     // Subscrever o método
