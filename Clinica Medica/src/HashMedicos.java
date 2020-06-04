@@ -37,6 +37,6 @@ public class HashMedicos {
     public String BuscarConsultas(int _codEspecialidade, String data){
     
         // retorna todas as consultas de uma especialidade específica em uma determinada data.
-        return listaMedicos[_codEspecialidade - 1].BuscarData(data).toString();
+        return listaMedicos[_codEspecialidade - 1].BuscarData(data);
     }
 }

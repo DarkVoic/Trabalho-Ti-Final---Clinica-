@@ -22,7 +22,7 @@ public class ModuloConsultas {
         System.out.println("| Dados do Médico:  | " + medico.toString() + ", Total Recebido: " + NumberFormat.getCurrencyInstance().format(medico.getValorTotal_Medico()));
         System.out.println("---------------------");
     }
-    
+
     public void BuscarPaciente(HashPacientes hashPacientes){
     
         System.out.println("Qual o CFP do paciente? ");
@@ -42,16 +42,18 @@ public class ModuloConsultas {
 
     public void BuscarConsultas(HashMedicos hashMedicos){
     
-        
         System.out.println("Qual a especialidade? ");
         int esp = ler.nextInt();
         System.out.println("Qual a data? <> 'Favor informar em Formato - dd/mm/aaaa - '");
         String data = ler.next();
-        System.out.println(hashMedicos.BuscarConsultas(esp, data));
-        // System.out.println(consultas);
-        // String consultas = hashMedicos.BuscarConsultas(esp, data);
+        String consultas = hashMedicos.BuscarConsultas(esp, data);
 
-        
+        if(consultas != ""){
+            System.out.println(consultas);
+        }
+        else{
+            System.out.println("Dados errado");
+        }
     }
     
 }

@@ -7,9 +7,9 @@ public class App {
     public static HashMedicos hashMedicos = new HashMedicos();
 
     static void Menu() {
-        System.out.println("---------------------");
+        System.out.println("------------------");
         System.out.println("| Clinica Médica | ");
-        System.out.println("---------------------");
+        System.out.println("------------------");
         System.out.println("Escolha a Opção");
         System.out.println("1 - Historico de Paciente");
         System.out.println("2 - Consultas");
@@ -54,6 +54,12 @@ public class App {
                     break;
                 case "3":
                     consultar.BuscarMedico(hashMedicos);
+                    break;
+                case "4":
+                   System.out.println("Matheus Santos Soares de Jesus");
+                   System.out.println("Alexander Jose Freire");
+                   System.out.println("Rafael Massula de Almeida");
+                   System.out.println("Bruno Vinicius Soares Araujo");
                     break;
                 default:
                     break;

@@ -89,13 +89,13 @@ public class ListaMedicos {
             // Variável para armazenar a saída dos que atendem a data.
             String consultas = "";
             aux = primeiro.Proximo;
-            while(aux != null)
-            {
+            while(aux != null){
+            
                 // Foreach percorrendo uma List 
-                for (var consulta : aux.getListaConsultas_Medicos()) {
-
-                    if(consulta.getData_Consulta() == data)
-                    {
+                for(var consulta : aux.getListaConsultas_Medicos()){
+                    // Condição "Equals" comparacão
+                    if(consulta.getData_Consulta().equals(data)){
+                    
                         consultas += consulta.toString() + "\n";
                     }
                 }
